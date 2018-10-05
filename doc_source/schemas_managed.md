@@ -27,6 +27,23 @@ QuickStartSchema : {
 }
 ```
 
+**QuickStartSchema ARN**
+
+The `QuickStartSchema` managed schema uses the following ARN:
+
+```
+String QUICK_START_SCHEMA_ARN = "arn:aws:clouddirectory:::schema/managed/quick_start/1.0/001" ;
+```
+
+For example, you could use this ARN to create a directory called `ExampleDirectory` as shown below:
+
+```
+CreateDirectoryRequest createDirectoryRequest = new 
+	CreateDirectoryRequest()
+    .withName("ExampleDirectory") // Directory name
+    .withSchemaArn(QUICK_START_SCHEMA_ARN);
+```
+
 ## Facet Styles<a name="schemas_managed_facet_styles"></a>
 
 There are two different styles that you can define on any given facet, `Static` and `Dynamic`\.

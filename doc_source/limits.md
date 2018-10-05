@@ -38,11 +38,10 @@ The following are the default limits for Cloud Directory\. Each limit is per reg
 | Number of written attribute values | 1000 per API call | 
 | Number of read attribute values | 1000 per API call | 
 | Path depth | 15 | 
-| Max objects in a single page | 30 | 
 | Max input size \(all inputs combined\) | 200 KB | 
 | Max response size \(all outputs combined\) | 1 MB | 
 | Policy size limit | 10 KB | 
-| Max number of existing attributes that can be deleted while deleting an object | 30 | 
+| Number of attributes that can be deleted during object deletion | 30 | 
 | Aggregate value length for typed link identity attributes | 64 UTF\-8 encoded bytes | 
 | Edge or link name length | 64 UTF\-8 encoded bytes | 
 | Value length for indexed attributes | 64 UTF\-8 encoded bytes | 
