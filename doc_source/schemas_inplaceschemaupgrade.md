@@ -21,7 +21,7 @@ Until December 2017, Cloud Directory has referred to the major version identifie
 
 *Minor version* is the version identifier used for in\-place upgrading of schemas or when you want to make backward\-compatible upgrades such as adding additional attributes or adding facets\. An upgraded schema using a minor version can be applied in place across all directories that use it without breaking any running applications\. This includes directories that are used in production environments\. For an example use case, see [“How to Easily Apply Amazon Cloud Directory Schema Changes with In\-Place Schema Upgrades”](https://aws.amazon.com/blogs/security/how-to-easily-apply-amazon-cloud-directory-schema-changes-with-in-place-schema-upgrades/) in the Cloud Directory Blog\.
 
-The minor version information and history is saved along with the other schema information in the schema metadata repository\. Cloud Directory retains up to five of the most recent minor versions\. No minor version information is retained in the objects\. The advantage of introducing minor version is that client code works seamlessly as long as the major version is not changed\.
+The minor version information and history is saved along with the other schema information in the schema metadata repository\. Cloud Directory retains and therefore limits up to five minor versions\. No minor version information is retained in the objects\. The advantage of introducing minor version is that client code works seamlessly as long as the major version is not changed\.
 
 ## Using the Schema Upgrade API Operations<a name="schemas_usingschemaupgradeapis"></a>
 
