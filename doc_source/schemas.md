@@ -9,7 +9,7 @@ When a schema has been applied to a directory, all data within that directory mu
 
 Applied schemas can later be updated using versioning and then reapplied to all the directories that use it\. For more information, see [In\-Place Schema Upgrade](schemas_inplaceschemaupgrade.md)\.
 
-Cloud Directory provides API operations to create, read, update, and delete schemas\. This allows the contents of the schema to be easily consumed by programmatic agents\. Such agents access the directory to discover the full set of facets, attributes, and constraints that apply to data within the directory\. For more information about the schema APIs, see the [Amazon Cloud Directory API Reference Guide](http://docs.aws.amazon.com/amazoncds/latest/APIReference/welcome.html)\.
+Cloud Directory provides API operations to create, read, update, and delete schemas\. This allows the contents of the schema to be easily consumed by programmatic agents\. Such agents access the directory to discover the full set of facets, attributes, and constraints that apply to data within the directory\. For more information about the schema APIs, see the [Amazon Cloud Directory API Reference Guide](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/welcome.html)\.
 
 Cloud Directory supports uploading a compliant JSON file for schema creation\. You can also create and manage schemas using the AWS Directory Services console\. For more information, see [Create an Amazon Cloud Directory](getting_started_create_directory.md)\.
 

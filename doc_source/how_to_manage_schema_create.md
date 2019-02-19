@@ -1,4 +1,4 @@
-# Create a Schema<a name="getting_started_create_schema"></a>
+# Create Your Schema<a name="how_to_manage_schema_create"></a>
 
 Amazon Cloud Directory supports uploading of a compliant JSON file for schema creation\. To create a new schema, you can either create your own JSON file from scratch or download one of the existing schemas listed in the console\. Then upload it as a custom schema\. For more information, see [Custom Schemas](schemas_customschematopic.md)\.
 

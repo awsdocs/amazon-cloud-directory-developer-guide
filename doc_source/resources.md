@@ -25,7 +25,7 @@ The following tables list related resources that you'll find useful as you work 
 | Cloud Directory Documentation | Link | 
 | --- | --- | 
 |  Cloud Directory Developer Guide  | [https://docs.aws.amazon.com/clouddirectory/latest/developerguide/what_is_cloud_directory.html](https://docs.aws.amazon.com/clouddirectory/latest/developerguide/what_is_cloud_directory.html) | 
-|  Cloud Directory API Reference  | [http://docs.aws.amazon.com/amazoncds/latest/APIReference/welcome.html](http://docs.aws.amazon.com/amazoncds/latest/APIReference/welcome.html) | 
+|  Cloud Directory API Reference  | [http://docs.aws.amazon.com/clouddirectory/latest/APIReference/welcome.html](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/welcome.html) | 
 | Cloud Directory Limits | [https://docs.aws.amazon.com/clouddirectory/latest/developerguide/limits.html](https://docs.aws.amazon.com/clouddirectory/latest/developerguide/limits.html) | 
 
 

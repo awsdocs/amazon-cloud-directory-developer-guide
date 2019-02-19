@@ -7,22 +7,22 @@ With Amazon Cloud Directory, it’s often necessary to add new objects or add re
 
 ## BatchWrite<a name="transaction_support_batchwrite"></a>
 
-Use [BatchWrite](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_BatchWrite.html) operations to perform multiple write operations on a directory\. All operations in batch write are executed sequentially\. It works similar to SQL database transactions\. If one of the operation inside batch write fails, the entire batch write has no effect on the directory\. If a batch write fails, a batch write exception occurs\. The exception contains the index of the operation that failed along with exception type and message\. This information can help you identify the root cause for the failure\.
+Use [BatchWrite](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_BatchWrite.html) operations to perform multiple write operations on a directory\. All operations in batch write are executed sequentially\. It works similar to SQL database transactions\. If one of the operation inside batch write fails, the entire batch write has no effect on the directory\. If a batch write fails, a batch write exception occurs\. The exception contains the index of the operation that failed along with exception type and message\. This information can help you identify the root cause for the failure\.
 
 The following API operations are supported as part of batch write:
-+ [AddFacetToObject](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_AddFacetToObject.html)
-+ [AttachObject](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_AttachObject.html)
-+ [AttachPolicy](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_AttachPolicy.html)
-+ [AttachToIndex](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_AttachToIndex.html)
-+ [AttachTypedLink](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_AttachTypedLink.html)
-+ [CreateIndex](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_CreateIndex.html)
-+ [CreateObject](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_CreateObject.html)
-+ [DeleteObject](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_DeleteObject.html)
-+ [DetachFromIndex](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_DetachFromIndex.html)
-+ [DetachObject](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_DetachObject.html)
-+ [DetachTypedLink](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_DetachTypedLink.html)
-+ [RemoveFacetFromObject](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_RemoveFacetFromObject.html)
-+ [UpdateObjectAttributes](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_UpdateObjectAttributes.html)
++ [AddFacetToObject](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_AddFacetToObject.html)
++ [AttachObject](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_AttachObject.html)
++ [AttachPolicy](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_AttachPolicy.html)
++ [AttachToIndex](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_AttachToIndex.html)
++ [AttachTypedLink](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_AttachTypedLink.html)
++ [CreateIndex](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_CreateIndex.html)
++ [CreateObject](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_CreateObject.html)
++ [DeleteObject](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_DeleteObject.html)
++ [DetachFromIndex](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_DetachFromIndex.html)
++ [DetachObject](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_DetachObject.html)
++ [DetachTypedLink](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_DetachTypedLink.html)
++ [RemoveFacetFromObject](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_RemoveFacetFromObject.html)
++ [UpdateObjectAttributes](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_UpdateObjectAttributes.html)
 
 ### Batch Reference Name<a name="transaction_support_batchreferencename"></a>
 
@@ -46,7 +46,7 @@ BatchWriteRequest batchWrite = new BatchWriteRequest()
 
 ## BatchRead<a name="transaction_support_batchread"></a>
 
-Use [BatchRead](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_BatchRead.html) operations to perform multiple read operations on a directory\. For example, in the following code sample, children of object with reference `“/managers”` is being read along with attributes of object with reference `“/managers/bob”` in a single batch read\.
+Use [BatchRead](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_BatchRead.html) operations to perform multiple read operations on a directory\. For example, in the following code sample, children of object with reference `“/managers”` is being read along with attributes of object with reference `“/managers/bob”` in a single batch read\.
 
 ```
 BatchListObjectChildren listObjectChildrenRequest = new BatchListObjectChildren()
@@ -61,25 +61,25 @@ BatchReadResult result = cloudDirectoryClient.batchRead(batchRead);
 ```
 
 BatchRead supports the following API operations:
-+ [GetObjectInformation](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_GetObjectInformation.html)
-+ [ListAttachedIndices](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_ListAttachedIndices.html)
-+ [ListIncomingTypedLinks](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_ListIncomingTypedLinks.html)
-+ [ListIndex](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_ListIndex.html)
-+ [ListObjectAttributes](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_ListObjectAttributes.html)
-+ [ListObjectChildren](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_ListObjectChildren.html)
-+ [ListObjectParentPaths](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_ListObjectParentPaths.html)
-+ [ListObjectPolicies](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_ListObjectPolicies.html)
-+ [ListOutgoingTypedLinks](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_ListOutgoingTypedLinks.html)
-+ [ListPolicyAttachments](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_ListPolicyAttachments.html)
-+ [LookupPolicy](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_LookupPolicy.html)
++ [GetObjectInformation](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_GetObjectInformation.html)
++ [ListAttachedIndices](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListAttachedIndices.html)
++ [ListIncomingTypedLinks](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListIncomingTypedLinks.html)
++ [ListIndex](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListIndex.html)
++ [ListObjectAttributes](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListObjectAttributes.html)
++ [ListObjectChildren](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListObjectChildren.html)
++ [ListObjectParentPaths](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListObjectParentPaths.html)
++ [ListObjectPolicies](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListObjectPolicies.html)
++ [ListOutgoingTypedLinks](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListOutgoingTypedLinks.html)
++ [ListPolicyAttachments](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListPolicyAttachments.html)
++ [LookupPolicy](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_LookupPolicy.html)
 
 ## Limits on Batch operations<a name="transaction_support_batchlimits"></a>
 
 Each request to the server \(including batched requests\) has a maximum number of resources that can be operated on, regardless of the number of operations in the request\. This allows you to compose batch requests with high flexibility as long as you stay within the resource maximums\. For more information on resource maximums, see [Amazon Cloud Directory Limits](limits.md)\.
 
-Limits are calculated by summing the writes or reads for each single operation inside the Batch​\. For example, the read operation limit is currently 200 objects per API call\. Let’s say you want to compose a batch that adds 9 [ListObjectChildren](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_ListObjectChildren.html) API calls and each call requires reading 20 objects \. Since the total number of read objects \(9 x 20 = 180\) does not exceed 200, the batch operation would succeed\. 
+Limits are calculated by summing the writes or reads for each single operation inside the Batch​\. For example, the read operation limit is currently 200 objects per API call\. Let’s say you want to compose a batch that adds 9 [ListObjectChildren](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListObjectChildren.html) API calls and each call requires reading 20 objects \. Since the total number of read objects \(9 x 20 = 180\) does not exceed 200, the batch operation would succeed\. 
 
-The same concept applies with calculating write operations\. For example, the write operation limit is currently 20\. If you set up your batch to add 2 [UpdateObjectAttributes](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_UpdateObjectAttributes.html) API calls with 9 write operations each, this would also succeed\. In either case, should the batch operation exceed the limit, then the operation will fail and a `LimitExceededException` will be thrown\.
+The same concept applies with calculating write operations\. For example, the write operation limit is currently 20\. If you set up your batch to add 2 [UpdateObjectAttributes](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_UpdateObjectAttributes.html) API calls with 9 write operations each, this would also succeed\. In either case, should the batch operation exceed the limit, then the operation will fail and a `LimitExceededException` will be thrown\.
 
 The correct way to calculate the number of objects that are included within a batch is to include both the actual node or leaf\_node objects and if using a path based approach to iterate your directory tree, you also need to include each path that is iterated on, within the batch\. For example, as shown in the following illustration of a basic directory tree, to read an attribute value for the object `003`, the total read count of objects would be three\. 
 

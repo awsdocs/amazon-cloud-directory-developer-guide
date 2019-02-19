@@ -1,6 +1,6 @@
 # Using the Cloud Directory APIs<a name="using_api"></a>
 
-Amazon Cloud Directory includes a set of API operations that enable programmatic access to Cloud Directory capabilities\. You can use the [Amazon Cloud Directory API Reference Guide](http://docs.aws.amazon.com/directoryservice/latest/APIReference/welcome.html) to learn how to make requests to the Cloud Directory API for creating and managing the various elements\. It also covers the components of requests, the content of responses, and how to authenticate requests\.
+Amazon Cloud Directory includes a set of API operations that enable programmatic access to Cloud Directory capabilities\. You can use the [Amazon Cloud Directory API Reference Guide](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/welcome.html) to learn how to make requests to the Cloud Directory API for creating and managing the various elements\. It also covers the components of requests, the content of responses, and how to authenticate requests\.
 
 Cloud Directory provides all necessary API operations that enable developers to build new applications\. It provides the following categories of API calls:
 + Create, read, update, delete \(CRUD\) for schema

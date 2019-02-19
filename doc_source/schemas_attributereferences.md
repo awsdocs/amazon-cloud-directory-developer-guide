@@ -89,11 +89,11 @@ You can apply facets with references to other facets but are not required to app
 
 ### Setting Attribute Reference Values<a name="schemas_settingattributerefvalues"></a>
 
-You can call the [UpdateObjectAttributes](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_UpdateObjectAttributes.html) API action when you want to change the value of an attribute\. Updating \(or deleting\) either the definition or any other reference to that same definition on that object has the same effect\. 
+You can call the [UpdateObjectAttributes](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_UpdateObjectAttributes.html) API action when you want to change the value of an attribute\. Updating \(or deleting\) either the definition or any other reference to that same definition on that object has the same effect\. 
 
 ### Getting Attribute Reference Values<a name="schemas_gettingattributerefvalues"></a>
 
-You can call the [ListObjectAttributes](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_ListObjectAttributes.html) API action to retrieve storage aliases\. This call returns a list of tuples, each of which contains an attribute key and its associated value\. The attribute keys correspond to the list of storage aliases present on that object\.
+You can call the [ListObjectAttributes](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListObjectAttributes.html) API action to retrieve storage aliases\. This call returns a list of tuples, each of which contains an attribute key and its associated value\. The attribute keys correspond to the list of storage aliases present on that object\.
 
 **Note**  
 It is possible for an attribute key to be returned for a facet that was not explicitly applied to an object\. This can happen when attribute references target facets that are not applied to the object\.

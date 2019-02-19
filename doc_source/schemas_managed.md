@@ -1,29 +1,33 @@
 # Managed Schema<a name="schemas_managed"></a>
 
-Cloud Directory makes it easy for you to rapidly develop applications by using a managed schema\. With a managed schema, you can create a directory and start creating and retrieving objects from it at a faster pace\. Currently, there is one managed schema, called the `QuickStartSchema`\. You can build a rich hierarchical data model and establish relationships across objects by using constructs such as [Typed Links](directory_objects_links.md#directory_objects_links_typedlink)\. You can then query for any information in your data by traversing the hierarchy\. 
+Cloud Directory makes it easy for you to rapidly develop applications by using a managed schema\. With a managed schema, you can create a directory and start creating and retrieving objects from it at a faster pace\. For more information, see [Create Your Directory](how_to_manage_directory_create.md)\.
+
+Currently, there is one managed schema, called the `QuickStartSchema`\. You can build a rich hierarchical data model and establish relationships across objects by using constructs such as [Typed Links](directory_objects_links.md#directory_objects_links_typedlink)\. You can then query for any information in your data by traversing the hierarchy\. 
 
 The `QuickStartSchema` managed schema is represented by the following JSON: 
 
 ```
-QuickStartSchema : {
-        "facets": {
-                "DynamicObjectFacet" : {
-            "facetStyle" : "DYNAMIC",
-     },
-     "DynamicTypedLinkFacet" : {
-  "facetAttributes" : {
-          "DynamicTypedLinkAttribute" : {
-                  "attributeDefinition" : {
-                         "attributeType": "VARIANT",
-             "isImmutable": false,
-             "attributeRules": {}
-                 },
-                 "requiredBehavior": "REQUIRED_ALWAYS"
-                                  }
-  },
-  "identityAttributeOrder": ["DynamicAttribute"]
-     }
+QuickStartSchema: {
+    "facets": {
+        "DynamicObjectFacet": {
+            "facetStyle": "DYNAMIC"
+        },
+        "DynamicTypedLinkFacet": {
+            "facetAttributes": {
+                "DynamicTypedLinkAttribute": {
+                    "attributeDefinition": {
+                        "attributeRules": {},
+                        "attributeType": "VARIANT",
+                        "isImmutable": false
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                }
+            },
+            "identityAttributeOrder": [
+                "DynamicAttribute"
+            ]
         }
+    }
 }
 ```
 
@@ -38,8 +42,7 @@ String QUICK_START_SCHEMA_ARN = "arn:aws:clouddirectory:::schema/managed/quick_s
 For example, you could use this ARN to create a directory called `ExampleDirectory` as shown below:
 
 ```
-CreateDirectoryRequest createDirectoryRequest = new 
-	CreateDirectoryRequest()
+CreateDirectoryRequest createDirectoryRequest = new CreateDirectoryRequest()
     .withName("ExampleDirectory") // Directory name
     .withSchemaArn(QUICK_START_SCHEMA_ARN);
 ```

@@ -8,13 +8,13 @@ A schema document is a JSON document in the following overall format\.
 
 ```
 {
-     “facets”: {
-            “facet name”: {
-		“facetAttributes”: {
-			“attribute name”: Attribute JSON Subsection
-              }
-      }
-   }
+    "facets": {
+        "facet name": {
+            "facetAttributes": {
+                "attribute name": Attribute JSON Subsection
+            }
+        }
+    }
 }
 ```
 
@@ -26,9 +26,9 @@ Facets contain attributes\. Each attribute defines the type of value that can be
 
 ```
 {
-     “attributeDefinition”: Attribute Definition Subsection,
-     “attributeReference”: Attribute Reference Subsection,
-     “requiredBehavior”: “REQUIRED_ALWAYS or NOT_REQUIRED”
+    "attributeDefinition": Attribute Definition Subsection,
+    "attributeReference": Attribute Reference Subsection,
+    "requiredBehavior": "REQUIRED_ALWAYS" or "NOT_REQUIRED"
 }
 ```
 
@@ -43,11 +43,11 @@ The required behavior field indicates whether this attribute is required or not\
 An attribute defines the type and the rules associated with an attribute value\. The following JSON layout describes the format\.
 
 ```
-{ 
-	“attributeType”: “One of STRING, NUMBER, BINARY, BOOLEAN, DATETIME”
-	“defaultValue”: Default Value Subsection
-       “isImmutable”: true or false
-	“attributeRules”: Attribute Rules Subsection
+{
+    "attributeType": One of "STRING", "NUMBER", "BINARY", "BOOLEAN" or "DATETIME",
+    "defaultValue": Default Value Subsection,
+    "isImmutable": true or false,
+    "attributeRules": "Attribute Rules Subsection"
 }
 ```
 
@@ -57,11 +57,11 @@ Specify exactly one of the following default values\. Long values and Boolean va
 
 ```
 { 
-	“stringValue”: “a string value”,
-	“longValue”: an integer value,
-	“booleanValue”: a boolean value,
-	“binaryValue”: a URL-safe Base64 encoded string,
-	“datetimeValue”: an integer value representing milliseconds since epoch
+	"stringValue": "a string value",
+	"longValue": an integer value,
+	"booleanValue": true or false,
+	"binaryValue": a URL-safe Base64 encoded string,
+	"datetimeValue": an integer value representing milliseconds since epoch
 }
 ```
 
@@ -71,13 +71,13 @@ Attributes rules define constraints on attribute values\. You can define multipl
 
 ```
 {
-	“rule name”: {
-		“parameters”: {
-			“rule parameter key 1”: “value”,
-			“rule parameter key 2”: “value”
-		},
-		“ruleType”: “rule type value”
-	}
+    "rule name": {
+        "parameters": {
+            "rule parameter key 1": "value",
+            "rule parameter key 2": "value"
+        },
+        "ruleType": "rule type value"
+    }
 }
 ```
 
@@ -87,9 +87,9 @@ Attribute references are an advanced feature\. They allow multiple facets to sha
 
 ```
 {
-	“targetSchemaArn”: “schema ARN”
-	“targetFacetName”: “facet name”
-	“targetAttributeName”: “attribute name”
+	"targetSchemaArn": "schema ARN"
+	"targetFacetName": "facet name"
+	"targetAttributeName": "attribute name"
 }
 ```
 
@@ -104,92 +104,92 @@ All values expressed in the `allowedValues` string must be comma separated and b
 
 ```
 {
-  "facets" : {
-    "Employee" : {
-      "facetAttributes" : {
-        "Name" : {
-          "attributeDefinition" : {
-            "attributeType" : "STRING",
-            "isImmutable" : false,
-            "attributeRules" : {
-              "NameLengthRule" : {
-                "parameters" : {
-                  "min" : "3",
-                  "max" : "100"
+    "facets": {
+        "Employee": {
+            "facetAttributes": {
+                "Name": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": false,
+                        "attributeRules": {
+                            "NameLengthRule": {
+                                "parameters": {
+                                    "min": "3",
+                                    "max": "100"
+                                },
+                                "ruleType": "STRING_LENGTH"
+                            }
+                        }
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
                 },
-                "ruleType": "STRING_LENGTH"
-              }
-            }
-          },
-          "requiredBehavior" : "REQUIRED_ALWAYS"
+                "EmailAddress": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": true,
+                        "attributeRules": {
+                            "EmailAddressLengthRule": {
+                                "parameters": {
+                                    "min": "3",
+                                    "max": "100"
+                                },
+                                "ruleType": "STRING_LENGTH"
+                            }
+                        }
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                },
+                "Status": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": false,
+                        "attributeRules": {
+                            "rule1": {
+                                "parameters": {
+                                    "allowedValues": "ACTIVE,INACTIVE,TERMINATED"
+                                },
+                                "ruleType": "STRING_FROM_SET"
+                            }
+                        }
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                }
+            },
+            "objectType": "LEAF_NODE"
         },
-        "EmailAddress" : {
-          "attributeDefinition" : {
-            "attributeType" : "STRING",
-            "isImmutable" : true,
-            "attributeRules" : {
-              "EmailAddressLengthRule" : {
-                "parameters" : {
-                  "min" : "3",
-                  "max" : "100"
-                },
-                "ruleType": "STRING_LENGTH"
-              }
-            }
-          },
-          "requiredBehavior" : "REQUIRED_ALWAYS"
+        "DataAccessPolicy": {
+            "facetAttributes": {
+                "AccessLevel": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": true,
+                        "attributeRules": {
+                            "rule1": {
+                                "parameters": {
+                                    "allowedValues": "SENSITIVE,CONFIDENTIAL,PUBLIC"
+                                },
+                                "ruleType": "STRING_FROM_SET"
+                            }
+                        }
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                }
+            },
+            "objectType": "POLICY"
         },
-        "Status" : {
-          "attributeDefinition" : {
-            "attributeType" : "STRING",
-            "isImmutable" : false,
-            "attributeRules" : {
-              "rule1" : {
-                "parameters" : {
-                  "allowedValues" : "ACTIVE,INACTIVE,TERMINATED"
-                },
-                "ruleType": "STRING_FROM_SET"
-              }
-            }
-          },
-          "requiredBehavior" : "REQUIRED_ALWAYS"
+        "Group": {
+            "facetAttributes": {
+                "Name": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": true
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                }
+            },
+            "objectType": "NODE"
         }
-      },
-      "objectType" : "LEAF_NODE"
-    },
-    "DataAccessPolicy" : {
-      "facetAttributes" : {
-        "AccessLevel" : {
-          "attributeDefinition" : {
-            "attributeType" : "STRING",
-            "isImmutable" : true,
-            "attributeRules" : {
-              "rule1" : {
-                "parameters" : {
-                  "allowedValues" : "SENSITIVE,CONFIDENTIAL,PUBLIC"
-                },
-                "ruleType": "STRING_FROM_SET"
-              }
-            }
-          },
-          "requiredBehavior" : "REQUIRED_ALWAYS"
-        }
-      },
-      "objectType" : "POLICY"
-    },
-    "Group" : {
-      "facetAttributes" : {
-        "Name" : {
-          "attributeDefinition" : {
-            "attributeType" : "STRING",
-            "isImmutable" : true
-          },
-          "requiredBehavior" : "REQUIRED_ALWAYS"
-        }
-      },
-      "objectType" : "NODE"
     }
-  }
 }
 ```
 
@@ -197,135 +197,138 @@ All values expressed in the `allowedValues` string must be comma separated and b
 
 ```
 {
-	"sourceSchemaArn": "",
-	"facets": {
-		"employee_facet": {
-			"facetAttributes": {
-				"employee_login": {
-					"attributeDefinition": {
-						"attributeType": "STRING",
-						"isImmutable": true,
-						"attributeRules": {}
-					},
-					"requiredBehavior": "REQUIRED_ALWAYS"
-				},
-				"employee_id": {
-					"attributeDefinition": {
-						"attributeType": "STRING",
-						"isImmutable": true,
-						"attributeRules": {}
-					},
-					"requiredBehavior": "REQUIRED_ALWAYS"
-				},
-				"employee_name": {
-					"attributeDefinition": {
-						"attributeType": "STRING",
-						"isImmutable": true,
-						"attributeRules": {}
-					},
-					"requiredBehavior": "REQUIRED_ALWAYS"
-				},
-				"employee_role": {
-					"attributeDefinition": {
-						"attributeType": "STRING",
-						"isImmutable": true,
-						"attributeRules": {}
-					},
-					"requiredBehavior": "REQUIRED_ALWAYS"
-				}
-			},
-			"objectType": "LEAF_NODE"
-		},
-		"device_facet": {
-			"facetAttributes": {
-				"device_id": {
-					"attributeDefinition": {
-						"attributeType": "STRING",
-						"isImmutable": true,
-						"attributeRules": {}
-					},
-					"requiredBehavior": "REQUIRED_ALWAYS"
-				},
-				"device_type": {
-					"attributeDefinition": {
-						"attributeType": "STRING",
-						"isImmutable": true,
-						"attributeRules": {}
-					},
-					"requiredBehavior": "REQUIRED_ALWAYS"
-				}
-			},
-			"objectType": "NODE"
-		},
-		"region_facet": {
-			"facetAttributes": {},
-			"objectType": "NODE"
-		},
-		"group_facet": {
-			"facetAttributes": {
-				"group_type": {
-					"attributeDefinition": {
-						"attributeType": "STRING",
-						"isImmutable": true,
-						"attributeRules": {}
-					},
-					"requiredBehavior": "REQUIRED_ALWAYS"
-				}
-			},
-			"objectType": "NODE"
-		},
-		"office_facet": {
-			"facetAttributes": {
-				"office_id": {
-					"attributeDefinition": {
-						"attributeType": "STRING",
-						"isImmutable": true,
-						"attributeRules": {}
-					},
-					"requiredBehavior": "REQUIRED_ALWAYS"
-				},
-				"office_type": {
-					"attributeDefinition": {
-						"attributeType": "STRING",
-						"isImmutable": true,
-						"attributeRules": {}
-					},
-					"requiredBehavior": "REQUIRED_ALWAYS"
-				},
-				"office_location": {
-					"attributeDefinition": {
-						"attributeType": "STRING",
-						"isImmutable": true,
-						"attributeRules": {}
-					},
-					"requiredBehavior": "REQUIRED_ALWAYS"
-				}
-			},
-			"objectType": "NODE"
-		}
-	},
-	"typedLinkFacets": {
-		"device_association": {
-			"facetAttributes": {
-				"device_type": {
-					"attributeDefinition": {
-						"attributeType": "STRING",
-						"isImmutable": false,
-						"attributeRules": {}
-					},
-					"requiredBehavior": "REQUIRED_ALWAYS"
-				},
-				"device_label": {
-					"attributeDefinition": {
-						"attributeType": "STRING",
-						"isImmutable": false,
-						"attributeRules": {}
-					},
-					"requiredBehavior": "REQUIRED_ALWAYS"
-				}
-			},
-			"identityAttributeOrder": ["device_label", "device_type"]
-		}
-	}
+    "sourceSchemaArn": "",
+    "facets": {
+        "employee_facet": {
+            "facetAttributes": {
+                "employee_login": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": true,
+                        "attributeRules": {}
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                },
+                "employee_id": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": true,
+                        "attributeRules": {}
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                },
+                "employee_name": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": true,
+                        "attributeRules": {}
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                },
+                "employee_role": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": true,
+                        "attributeRules": {}
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                }
+            },
+            "objectType": "LEAF_NODE"
+        },
+        "device_facet": {
+            "facetAttributes": {
+                "device_id": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": true,
+                        "attributeRules": {}
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                },
+                "device_type": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": true,
+                        "attributeRules": {}
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                }
+            },
+            "objectType": "NODE"
+        },
+        "region_facet": {
+            "facetAttributes": {},
+            "objectType": "NODE"
+        },
+        "group_facet": {
+            "facetAttributes": {
+                "group_type": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": true,
+                        "attributeRules": {}
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                }
+            },
+            "objectType": "NODE"
+        },
+        "office_facet": {
+            "facetAttributes": {
+                "office_id": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": true,
+                        "attributeRules": {}
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                },
+                "office_type": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": true,
+                        "attributeRules": {}
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                },
+                "office_location": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": true,
+                        "attributeRules": {}
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                }
+            },
+            "objectType": "NODE"
+        }
+    },
+    "typedLinkFacets": {
+        "device_association": {
+            "facetAttributes": {
+                "device_type": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": false,
+                        "attributeRules": {}
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                },
+                "device_label": {
+                    "attributeDefinition": {
+                        "attributeType": "STRING",
+                        "isImmutable": false,
+                        "attributeRules": {}
+                    },
+                    "requiredBehavior": "REQUIRED_ALWAYS"
+                }
+            },
+            "identityAttributeOrder": [
+                "device_label",
+                "device_type"
+            ]
+        }
+    }
 }
 ```

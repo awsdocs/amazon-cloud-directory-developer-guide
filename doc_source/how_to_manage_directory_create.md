@@ -1,4 +1,4 @@
-# Create an Amazon Cloud Directory<a name="getting_started_create_directory"></a>
+# Create Your Directory<a name="how_to_manage_directory_create"></a>
 
 Before you can create a directory in Amazon Cloud Directory, AWS Directory Service requires that you first apply a schema to it\. A directory cannot be created without a schema and typically has one schema applied to it\. However, you use Cloud Directory API operations to apply additional schemas to a directory\. For more information, see [ApplySchema](http://docs.aws.amazon.com/amazoncds/latest/APIReference/API_ApplySchema.html) in the *Amazon Cloud Directory API Reference Guide*\.
 

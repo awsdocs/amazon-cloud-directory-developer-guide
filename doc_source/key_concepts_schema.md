@@ -2,9 +2,13 @@
 
 A schema is a collection of facets that define what objects can be created in a directory and how they are organized\. A schema also enforces data integrity and interoperability\. A single schema can be applied to more than one directory at a time\. For more information, see [Schemas](schemas.md)\.
 
-## Facet<a name="key_concepts_facets"></a>
+## Facets<a name="key_concepts_facets"></a>
 
 A facet is a collection of attributes, constraints, and links defined within a schema\. Combined together, facets define the objects in a directory\. For example, Person and Device can be facets to define corporate employees with association of multiple devices\. For more information, see [Facets](schemas_whatarefacets.md)\.
+
+## Managed Schemas<a name="key_concepts_sampleschemas"></a>
+
+A schema provided to make it easier to quickly develop and maintain your applications\. For more information, see [Managed Schema](schemas_managed.md)\.
 
 ## Sample Schemas<a name="key_concepts_sampleschemas"></a>
 

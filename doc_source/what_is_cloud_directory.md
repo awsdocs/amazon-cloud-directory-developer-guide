@@ -11,7 +11,7 @@ At its core, Cloud Directory is a specialized graph\-based directory store that 
 + Reduce the complexity of layering applications on top of Cloud Directory
 + Manage the evolution of schema information over time, ensuring future compatibility for consumers 
 
-Cloud Directory includes a set of API operations to access various objects and policies stored in your Cloud Directory\-based directories\. For a list of available operations, see [Amazon Cloud Directory API Actions](http://docs.aws.amazon.com/directoryservice/latest/APIReference/API_Operations.html)\. For a list of operations and the permissions required to perform each API action, see [Amazon Cloud Directory API Permissions: Actions, Resources, and Conditions Reference](iam_auth_access_usingwith_iam_resourcepermissions.md)\.
+Cloud Directory includes a set of API operations to access various objects and policies stored in your Cloud Directory\-based directories\. For a list of available operations, see [Amazon Cloud Directory API Actions](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_Operations.html)\. For a list of operations and the permissions required to perform each API action, see [Amazon Cloud Directory API Permissions: Actions, Resources, and Conditions Reference](iam_auth_access_usingwith_iam_resourcepermissions.md)\.
 
 For a list of supported Cloud Directory regions, see the [AWS Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#clouddirectory_region) documentation\. For additional resources, see [Cloud Directory Resources](resources.md)\. 
 

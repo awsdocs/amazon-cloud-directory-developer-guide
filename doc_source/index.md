@@ -1,7 +1,7 @@
 # Amazon Cloud Directory Developer Guide
 
 -----
-*****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -41,9 +41,22 @@ Amazon's trademarks and trade dress may not be used in
    + [Index Lifecycle](indexing_search_lifecycle.md)
    + [Facet-Based Indexing](indexing_search_facet.md)
    + [Unique vs Nonunique Indexes](indexing_search_unique.md)
++ [How To Administer Cloud Directory](how_to.md)
+   + [Manage Your Directories](how_to_manage_directory.md)
+      + [Create Your Directory](how_to_manage_directory_create.md)
+      + [Delete Your Directory](how_to_manage_directory_delete.md)
+      + [Disable Your Directory](how_to_manage_directory_disable.md)
+      + [Enable Your Directory](how_to_manage_directory_enable.md)
+   + [Manage Your Schema](how_to_manage_schema.md)
+      + [Create Your Schema](how_to_manage_schema_create.md)
+      + [Delete a Schema](how_to_manage_schema_delete.md)
+      + [Download a Schema](how_to_manage_schema_download.md)
+      + [Publish a Schema](how_to_manage_schema_publish.md)
+      + [Update Your Schema](how_to_manage_schema_update.md)
+      + [Upgrade Your Schema](how_to_manage_schema_upgrade.md)
 + [Authentication and Access Control for Amazon Cloud Directory](iam_auth_access.md)
-   + [Overview of Managing Access Permissions to Your AWS Directory Service Resources](iam_auth_access_accesscontrol_overview.md)
-   + [Using Identity-Based Policies (IAM Policies) for AWS Directory Service](iam_auth_access_accesscontrol_identitybased.md)
+   + [Overview of Managing Access Permissions to Your Cloud Directory Resources](iam_auth_access_accesscontrol_overview.md)
+   + [Using Identity-Based Policies (IAM Policies) for Cloud Directory](iam_auth_access_accesscontrol_identitybased.md)
    + [Amazon Cloud Directory API Permissions: Actions, Resources, and Conditions Reference](iam_auth_access_usingwith_iam_resourcepermissions.md)
 + [Transaction Support](transaction_support.md)
 + [Amazon Cloud Directory Compliance](compliance.md)
