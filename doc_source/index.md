@@ -18,6 +18,7 @@ Amazon's trademarks and trade dress may not be used in
 + [Getting Started](getting_started.md)
    + [Create a Schema](getting_started_create_schema.md)
    + [Create an Amazon Cloud Directory](getting_started_create_directory.md)
+   + [Using Cloud Directory Interface VPC Endpoints](getting_started_using_vpc_endpoints.md)
 + [Understanding Key Cloud Directory Concepts](key_concepts.md)
    + [Schema](key_concepts_schema.md)
    + [Directory](key_concepts_directory.md)

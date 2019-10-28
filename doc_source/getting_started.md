@@ -5,3 +5,4 @@ In this getting started exercise, you create a schema\. You then choose to creat
 **Topics**
 + [Create a Schema](getting_started_create_schema.md)
 + [Create an Amazon Cloud Directory](getting_started_create_directory.md)
++ [Using Cloud Directory Interface VPC Endpoints](getting_started_using_vpc_endpoints.md)

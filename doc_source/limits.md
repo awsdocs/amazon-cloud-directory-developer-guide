@@ -44,7 +44,7 @@ The following are the default limits for Cloud Directory\. Each limit is per reg
 | Number of attributes that can be deleted during object deletion | 30 | 
 | Aggregate value length for typed link identity attributes | 64 UTF\-8 encoded bytes | 
 | Edge or link name length | 64 UTF\-8 encoded bytes | 
-| Value length for indexed attributes | 64 UTF\-8 encoded bytes | 
+| Value length for indexed attributes | 512 UTF\-8 encoded bytes | 
 | Value length for non\-indexed attributes | 2KB | 
 | Number of policies attached to an object | 4 | 
 
