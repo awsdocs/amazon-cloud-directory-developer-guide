@@ -17,12 +17,53 @@ Cloud Directory currently supports VPC endpoints in the following Regions:
 + Asia Pacific \(Singapore\)
 + Asia Pacific \(Sydney\)
 + Canada \(Central\)
-+ EU \(Frankfurt\)
-+ EU \(Ireland\)
-+ EU \(London\)
++ Europe \(Frankfurt\)
++ Europe \(Ireland\)
++ Europe \(London\)
++ AWS GovCloud \(US\-West\)
 
 ## Create a VPC for Cloud Directory<a name="vpc_endpoints_create"></a>
 
-To start using Cloud Directory with your VPC, use the Amazon VPC console to create an interface VPC endpoint for Cloud Directory\. For detailed instructions, see the procedure "To create an interface endpoint to an AWS server using the console" in [Creating an Interface Endpoint](https://docs.aws.amazon.com/vpc/latest/userguide/vpce-interface.html#create-interface-endpoint) within the *Amazon VPC User Guide*\. When you get to the step in the procedure that asks to select a **Service Name**, choose **`com.amazonaws.region.clouddirectory`** to create a VPC endpoint for Cloud Directory operations\.
+To start using Cloud Directory with your VPC, use the Amazon VPC console to create an interface VPC endpoint for Cloud Directory\. For more information, see [Creating an Interface Endpoint](https://docs.aws.amazon.com/vpc/latest/userguide/vpce-interface.html#create-interface-endpoint)\. 
++ For **Service Category**, choose **AWS services**\.
++ For **Service Name**, choose **`com.amazonaws.region.clouddirectory`**\. This creates a VPC endpoint for Cloud Directory operations\.
 
-For general information, see [What is Amazon VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) in the *Amazon VPC User Guide*\.
+For general information, see [What is Amazon VPC?](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) in the *Amazon VPC User Guide*\.
+
+### Control Access to Your Cloud Directory VPC Endpoint<a name="vpc_endpoints_control_access"></a>
+
+A VPC endpoint policy is an IAM resource policy that you attach to an endpoint when you create or modify the endpoint\. If you don't attach a policy when you create an endpoint, we attach a default policy for you that allows full access to the service\. An endpoint policy doesn't override or replace IAM user policies or service\-specific policies\. It's a separate policy for controlling access from the endpoint to the specified service\.
+
+Endpoint policies must be written in JSON format\. For more information, see [Controlling Access to Services with VPC Endpoints](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) in the *Amazon VPC User Guide*\.
+
+The following is an example of an endpoint policy for Cloud Directory\. This policy enables users connecting to Cloud Directory through the VPC to list directories and prevents them from performing other Cloud Directory actions\.
+
+```
+{
+  "Statement": [
+    {
+      "Sid": "ReadOnly",
+      "Principal": "*",
+      "Action": [
+        "clouddirectory:ListDirectories"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+```
+
+**To modify the VPC endpoint policy for Cloud Directory**
+
+1. Open the Amazon VPC console at [https://console\.aws\.amazon\.com/vpc/](https://console.aws.amazon.com/vpc/)\.
+
+1. In the navigation pane, choose **Endpoints**\.
+
+1. If you have not already created the endpoint for Cloud Directory, choose **Create Endpoint**\. Then select **`com.amazonaws.region.clouddirectory`** and choose **Create endpoint**\.
+
+1. Select the **`com.amazonaws.region.clouddirectory`** endpoint and choose the **Policy** tab in the lower half of the screen\.
+
+1. Choose **Edit Policy** and make the changes to the policy\.
+
+For more information, see [Controlling Access to Services with VPC Endpoints](https://docs.aws.amazon.com/vpc/latest/userguide/GetStarted.html) in the *Amazon VPC User Guide*\.

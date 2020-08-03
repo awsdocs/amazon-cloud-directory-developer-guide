@@ -1,7 +1,7 @@
 # Amazon Cloud Directory Developer Guide
 
 -----
-*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -55,14 +55,19 @@ Amazon's trademarks and trade dress may not be used in
       + [Publish a Schema](how_to_manage_schema_publish.md)
       + [Update Your Schema](how_to_manage_schema_update.md)
       + [Upgrade Your Schema](how_to_manage_schema_upgrade.md)
-+ [Authentication and Access Control for Amazon Cloud Directory](iam_auth_access.md)
-   + [Overview of Managing Access Permissions to Your Cloud Directory Resources](iam_auth_access_accesscontrol_overview.md)
-   + [Using Identity-Based Policies (IAM Policies) for Cloud Directory](iam_auth_access_accesscontrol_identitybased.md)
-   + [Amazon Cloud Directory API Permissions: Actions, Resources, and Conditions Reference](iam_auth_access_usingwith_iam_resourcepermissions.md)
++ [Security in Amazon Cloud Directory](security.md)
+   + [Identity and Access Management in Amazon Cloud Directory](iam_auth_access.md)
+      + [Overview of Managing Access Permissions to Your Cloud Directory Resources](iam_auth_access_accesscontrol_overview.md)
+      + [Using Identity-Based Policies (IAM Policies) for Cloud Directory](iam_auth_access_accesscontrol_identitybased.md)
+      + [Amazon Cloud Directory API Permissions: Actions, Resources, and Conditions Reference](iam_auth_access_usingwith_iam_resourcepermissions.md)
+   + [Logging and Monitoring in Amazon Cloud Directory](incident-response.md)
+   + [Compliance Validation for Amazon Cloud Directory](cd-compliance.md)
+   + [Resilience in Amazon Cloud Directory](disaster-recovery-resiliency.md)
+   + [Infrastructure Security in Amazon Cloud Directory](infrastructure-security.md)
 + [Transaction Support](transaction_support.md)
 + [Amazon Cloud Directory Compliance](compliance.md)
 + [Using the Cloud Directory APIs](using_api.md)
 + [Amazon Cloud Directory Limits](limits.md)
 + [Cloud Directory Resources](resources.md)
 + [Document History](document_history.md)
-+ [AWS Glossary](glossary.md)
++ [AWS glossary](glossary.md)
