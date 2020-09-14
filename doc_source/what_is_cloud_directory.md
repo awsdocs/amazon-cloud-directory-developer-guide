@@ -1,6 +1,6 @@
 # What Is Amazon Cloud Directory?<a name="what_is_cloud_directory"></a>
 
-Amazon Cloud Directory is a highly available multi\-tenant directory\-based store in AWS\. These directories scale automatically to hundreds of millions of objects as needed for applications\. This lets operation's staff focus on developing and deploying applications that drive the business, not managing directory infrastructure\. Unlike traditional directory systems, Cloud Directory does not limit organizing directory objects in a single fixed hierarchy\. 
+Amazon Cloud Directory is a highly available multi\-tenant directory\-based store in AWS\. These directories scale automatically to hundreds of millions of objects as needed for applications\. This lets operations staff focus on developing and deploying applications that drive the business, not managing directory infrastructure\. Unlike traditional directory systems, Cloud Directory does not limit organizing directory objects in a single fixed hierarchy\. 
 
 With Cloud Directory, you can organize directory objects into multiple hierarchies to support many organizational pivots and relationships across directory information\. For example, a directory of users may provide a hierarchical view based on reporting structure, location, and project affiliation\. Similarly, a directory of devices may have multiple hierarchical views based on its manufacturer, current owner, and physical location\.
 
