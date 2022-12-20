@@ -2,6 +2,8 @@
 
 This topic provides examples of identity\-based policies in which an account administrator can attach permissions policies to IAM identities \(that is, users, groups, and roles\)\. 
 
+ 
+
 **Important**  
 We recommend that you first review the introductory topics that explain the basic concepts and options available for you to manage access to your Cloud Directory resources\. For more information, see [Overview of Managing Access Permissions to Your Cloud Directory Resources](iam_auth_access_accesscontrol_overview.md)\.
 

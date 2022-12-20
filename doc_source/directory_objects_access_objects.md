@@ -77,6 +77,8 @@ For an example on how this works, let's say a directory has an object hierarchy 
 
 The numbered shapes represent the different objects\. The number of arrows between that object and the directory root \(`000`\) represent the complete path and would be expressed in the output\. The following table shows requests and responses from queries made to specific leaf node objects in the hierarchy\. 
 
+ 
+
 
 **Example queries on objects**  
 

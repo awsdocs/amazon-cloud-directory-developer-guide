@@ -34,6 +34,8 @@ Typed link attributes can be used when you need to do any of the following:
 + Track administrative data about your typed link, such as the date the link was created\.
 
 Consider the following when deciding if typed links are right for your use case: 
+
+ 
 + Typed links cannot be used in path\-based object specification\. Instead, you must select typed links using the [http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListOutgoingTypedLinks.html](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListOutgoingTypedLinks.html) or [http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListIncomingTypedLinks.html](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListIncomingTypedLinks.html) API operations\.
 + Typed links do not participate in [http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_LookupPolicy.html](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_LookupPolicy.html) or [http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListObjectParentPaths.html](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/API_ListObjectParentPaths.html) API operations\. 
 + Typed links between the same two objects and in the same direction may not have the same attribute values\. This can help avoid duplicated typed links between the same objects\.
@@ -50,6 +52,8 @@ Identity is what uniquely defines whether a typed link can exist between two obj
 Typed links that are created from different typed link facets never conflict with each other\. For example, consider the following diagram:
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/clouddirectory/latest/developerguide/images/typedlinks.png)
+
+ 
 + Object `001` has typed links and attributes \(A1 and A2\) with the same attribute values \(x1 and x2\) going to different objects \(`002` and `003`\)\. This operation would succeed\.
 + Objects `002` and `003` have a typed link between them\. This operation would fail because two typed links in the same direction with the same attributes cannot exist between objects\.
 + Objects `001` and `003` have two typed links between them with the same attributes\. However, since the links go in different directions, this operation would succeed\.

@@ -55,6 +55,8 @@ There are no limits on the number of operations you can call inside a batch\. Fo
 ### Limits that cannot be modified<a name="limits_cantbemodified"></a>
 
 Amazon Cloud Directory limits that cannot be changed or increased, include:
+
+ 
 + Facet name length
 + Directory name length
 + Schema name length

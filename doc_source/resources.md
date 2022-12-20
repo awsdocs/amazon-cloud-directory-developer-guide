@@ -3,10 +3,14 @@
 The following tables list related resources that you'll find useful as you work with this service\.
 
 
+
+
 | Cloud Directory Getting Started | Link | 
 | --- | --- | 
 | Cloud Directory Webinar | [https://www.youtube.com/watch?v=UANm3DC_IxE](https://www.youtube.com/watch?v=UANm3DC_IxE) | 
 |  Cloud Directory Sample Java Code  | [https://github\.com/aws\-samples/AmazonCloudDirectory\-sample](https://github.com/aws-samples/AmazonCloudDirectory-sample) | 
+
+
 
 
 | Cloud Directory Blog Posts | Description | 
@@ -22,11 +26,15 @@ The following tables list related resources that you'll find useful as you work 
 | [Amazon Cloud Directory – A Cloud\-Native Directory for Hierarchical Data](https://aws.amazon.com/blogs/aws/amazon-cloud-directory-a-cloud-native-directory-for-hierarchical-data/) | Describes the launch of Cloud Directory as a new service from AWS\. | 
 
 
+
+
 | Cloud Directory Documentation | Link | 
 | --- | --- | 
 |  Cloud Directory Developer Guide  | [https://docs.aws.amazon.com/clouddirectory/latest/developerguide/what_is_cloud_directory.html](https://docs.aws.amazon.com/clouddirectory/latest/developerguide/what_is_cloud_directory.html) | 
 |  Cloud Directory API Reference  | [http://docs.aws.amazon.com/clouddirectory/latest/APIReference/welcome.html](http://docs.aws.amazon.com/clouddirectory/latest/APIReference/welcome.html) | 
 | Cloud Directory Limits | [https://docs.aws.amazon.com/clouddirectory/latest/developerguide/limits.html](https://docs.aws.amazon.com/clouddirectory/latest/developerguide/limits.html) | 
+
+
 
 
 | Cloud Directory Other | Link | 

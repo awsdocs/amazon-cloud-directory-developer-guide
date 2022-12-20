@@ -6,6 +6,8 @@ Cloud Directory comes ready with sample schemas for Organizations, Persons, and 
 
 The following tables list the facets that are included in the *Organizations* sample schema\.
 
+ 
+
 
 ****  
 
@@ -24,6 +26,8 @@ The following tables list the facets that are included in the *Organizations* sa
 | web\_site  | String  | 1024  | N  | Website URL  | 
 | telephone\_number  | String  | 1024  | N  | Telephone number for Organization  | 
 | description  | String  | 1024  | N  | Description for Organization  | 
+
+ 
 
 
 ****  
@@ -44,6 +48,8 @@ The following tables list the facets that are included in the *Organizations* sa
 ## Person<a name="schemas_personschema"></a>
 
 The following tables list the facets that are included in the *Person* sample schema\.
+
+ 
 
 
 ****  
@@ -72,6 +78,8 @@ The following tables list the facets that are included in the *Person* sample sc
 | address \(postal\_code\) | String | 1024 | N | A physical mailing address for this user\. | 
 | user\_status | String | 1024 | N | Value indicating the user's administrative status | 
 
+ 
+
 
 ****  
 
@@ -94,6 +102,8 @@ The following tables list the facets that are included in the *Person* sample sc
 ## Device<a name="schemas_deviceschema"></a>
 
 The following table lists the facet that is included in the *Device* sample schema\.
+
+ 
 
 
 ****  
